@@ -36,6 +36,7 @@ p {
     font-size: 1.2rem;
 
 }
+/*
 .accordion-button {
     background-color: #f1f1f1;
     border: none;
@@ -56,7 +57,34 @@ p {
     padding: 15px;
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
+} */
+ /* Accordion Styling */
+.accordion .accordion-item {
+    border-bottom: 1px solid #ddd;
 }
+
+.accordion-header {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none; /* Hide content by default */
+    background-color: #fafafa;
+}
+.accordion-header.active {
+    background-color: #d0d0d0;
+    color: #007bff;
+}
+
 form#contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -167,18 +195,6 @@ form#mortgage-form button {
 form#mortgage-form button:hover {
     background-color: #0056b3;
 }
-.calculator-result {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    background-color: #e9ecef;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
 #result {
     display: none;
     max-width: 600px;
@@ -201,4 +217,12 @@ form#mortgage-form button:hover {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
 }

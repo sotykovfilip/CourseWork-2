@@ -26,21 +26,10 @@ function calculateMortgage() {
 
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const accordionButtons = document.querySelectorAll(".accordion-button");
-
-    accordionButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Toggle active class on button
-            this.classList.toggle("active");
-
-            // Get the associated content
-            const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
+$(document).ready(function() {
+    $('.accordion-header').on('click', function() {
+        $(this).next('.accordion-content').stop(true, true).slideToggle();
+        $('.accordion-header').not(this).removeClass('active');
+        $(this).toggleClass('active');
     });
 });
