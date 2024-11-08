@@ -1,7 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 .navbar {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e3e7f1;
+    background-color: black;
     padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
 }
 .nav-links {
     display: flex;
@@ -16,53 +21,52 @@ nav a.active {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: white;
 }
 body {
-    margin: auto;
+    margin: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.hero-info {
+#hero{
+    height: 100vh;
+    background-color: #2ecc71;
     text-align: center;
+    line-height: 100vh;
+    margin: 0;
+}
+#hero h1{
+    margin: 0;
+}
+#scroll{
+    background-color: #3498db;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 70px;
     color: white;
-    background-color: green;
-    margin: auto;
-    width: 60%;
-    padding: 10;
-    border-radius: 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 35px);
+}
+#top{
+    height: 1000px;
+    background-color: #2c3e50;
+    margin: 0;
+
 }
 p {
     font-size: 1.2rem;
 
 }
-/*
-.accordion-button {
-    background-color: #f1f1f1;
-    border: none;
-    color: #333;
-    padding: 15px;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.2s;
-}
-.accordion-button:hover {
-    background-color: #ddd;
-}
-.accordion-content {
-    display: none;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-} */
- /* Accordion Styling */
 .accordion .accordion-item {
     border-bottom: 1px solid #ddd;
+    width: 60%;
+    margin: 0 auto;
 }
-
 .accordion-header {
     padding: 15px;
     font-weight: bold;
@@ -70,21 +74,18 @@ p {
     background-color: #f1f1f1;
     transition: background-color 0.3s ease;
 }
-
 .accordion-header:hover {
     background-color: #e0e0e0;
 }
-
 .accordion-content {
     padding: 15px;
-    display: none; /* Hide content by default */
+    display: none;
     background-color: #fafafa;
 }
 .accordion-header.active {
     background-color: #d0d0d0;
     color: #007bff;
 }
-
 form#contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -202,8 +203,6 @@ form#mortgage-form button:hover {
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
-    background-color: #e9ecef;
     border-radius: 4px;
     text-align: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);

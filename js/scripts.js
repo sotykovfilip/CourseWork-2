@@ -7,18 +7,22 @@ function calculateMortgage() {
     const monthlyPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
 
     const resultDiv = document.getElementById('result');
+    const infoDiv = document.getElementById('resultInfo');
+    const br = document.createElement('br');
     resultDiv.classList.remove('success', 'error');
-
-    if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm) || isNaN(monthlyIncome)) {
-        resultDiv.style.display = 'none'; 
-        return;
-    }
+    infoDiv.innerText = '';
 
     if (monthlyPayment > 0.3 * monthlyIncome) {
         resultDiv.innerText = "Loan amount too high based on your monthly income.";
         resultDiv.classList.add('error');
+        let maxMonthly = 0.3 * monthlyIncome;
+        let maxLoan = (maxMonthly / interestRate) * (Math.pow(1 + interestRate, loanTerm) - 1) / Math.pow(1 + interestRate, loanTerm);
+        infoDiv.innerHTML = `The maximum loan amount you can afford for a ${loanTerm} month long loan is £${maxLoan.toFixed(2)}`;
     } else {
         resultDiv.innerText = `Your monthly payment is: £${monthlyPayment.toFixed(2)}`;
+        infoDiv.innerText = `Based on a loan amount of £${loanAmount.toFixed(2)} over ${loanTerm / 12} years at 4.5% interest rate.`;
+        infoDiv.appendChild(br);
+        infoDiv.innerHTML += `The total amount paid will be £${(monthlyPayment * loanTerm).toFixed(2)}`;
         resultDiv.classList.add('success');
     }
 
@@ -33,3 +37,19 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 });
+
+(function () {
+    "use strict";
+
+    const COMPONENT_ID = 'scroll'; 
+
+    var scrollButton = document.getElementById(COMPONENT_ID);
+
+    $(scrollButton).on('click', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+})()
