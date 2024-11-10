@@ -1,0 +1,7 @@
+mocha: #D0C7C0
+platinum: #E0E1DD
+midnights: #22292F
+silver lake blue: #748CAB
+taupe: #9F9A94
+sapphire: #40516B
+swiss: #F4ECD9
