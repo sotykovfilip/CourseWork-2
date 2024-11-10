@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 * {
     padding: 0;
     margin: 0;
 }
 .navbar {
-    background-color: black;
-    padding: 0.5rem 1rem;
+    background-color: #0f0f0f;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
+    font-family: 'DM Serif Text', serif;
 }
 .nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
 }
@@ -27,8 +29,8 @@ a {
 body {
     margin: 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #0f0f0f;
+    font-family: "Times New Roman", Times, serif;
 }
 h2 {
     color: white;
@@ -50,20 +52,30 @@ section {
     transform: translateY(0);
     color: white;
 }
+.s2 h1 {
+    font-size: 2em;
+    color: white;
+}
 .itemList {
     color: white;
 }
+.item {
+    margin: 10px;
+}
 .item:nth-child(2){
-    transition-delay: 200ms;
+    transition-delay: 150ms;
 }
 .item:nth-child(3){
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 .item:nth-child(4){
-    transition-delay: 600ms;
+    transition-delay: 450ms;
 }
 .item:nth-child(5){
-    transition-delay: 800ms;
+    transition-delay: 600ms;
+}
+.item:nth-child(6){
+    transition-delay: 750ms;
 }
 .hero-image{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg");
@@ -106,19 +118,25 @@ p {
     background-color: #d0d0d0;
     color: #007bff;
 }
+.accordion-item:first-child .accordion-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.accordion-item:last-child .accordion-header {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 form#contact-form {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 form#contact-form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333;
+    color: #fdfdfd;
 }
 form#contact-form input[type="text"],
 form#contact-form input[type="email"],
@@ -132,6 +150,10 @@ form#contact-form textarea {
     font-size: 16px;
     color: #333;
     box-sizing: border-box;
+}
+form#contact-form textarea {
+    resize: none;
+    height: 150px;
 }
 form#contact-form input[type="text"]:focus,
 form#contact-form input[type="email"]:focus,
@@ -169,10 +191,6 @@ form#contact-form button[type="submit"]:hover {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
-}
-textarea {
-    resize: none;
-    height: 150px;
 }
 form#mortgage-form {
     max-width: 600px;
@@ -245,7 +263,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 5%;
-    background-color: black;
+    background-color: #0f0f0f;
     color: white;
     text-align: center;
 }
