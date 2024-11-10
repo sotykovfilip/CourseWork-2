@@ -30,11 +30,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0f0f0f;
 }
+h2 {
+    color: white;
+}
 section {
-    display: grid;
-    place-items: center;
-    align-items: center;
-    margin: 10% auto 10%;
+    margin: 5% auto 25%;
     height: 30em;
     width: 80%;
 }
@@ -50,6 +50,21 @@ section {
     transform: translateY(0);
     color: white;
 }
+.itemList {
+    color: white;
+}
+.item:nth-child(2){
+    transition-delay: 200ms;
+}
+.item:nth-child(3){
+    transition-delay: 400ms;
+}
+.item:nth-child(4){
+    transition-delay: 600ms;
+}
+.item:nth-child(5){
+    transition-delay: 800ms;
+}
 .hero-image{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg");
   height: 100%;
@@ -64,30 +79,8 @@ section {
     color: white;
     font-size: 3em;
 }
-
-#scroll{
-    background-color: #3498db;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: block;
-    text-align: center;
-    line-height: 70px;
-    color: white;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0px;
-    left: calc(50% - 35px);
-}
-#top{
-    height: 1000px;
-    background-color: #2c3e50;
-    margin: 0;
-
-}
 p {
     font-size: 1.2rem;
-
 }
 .accordion .accordion-item {
     border-bottom: 1px solid #ddd;
@@ -243,6 +236,9 @@ form#mortgage-form button:hover {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
+}
+#resultInfo {
+    color: white;
 }
 footer {
     position: fixed;
