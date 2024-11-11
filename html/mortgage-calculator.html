@@ -21,6 +21,7 @@
     </nav>
     <main>
         <h2>Mortgage Calculator</h2>
+                <!-------
         <form id="mortgage-form">
             <label for="loanAmount">Loan Amount:</label>
             <input type="number" id="loanAmount" required>
@@ -33,6 +34,28 @@
             
             <button type="button" onclick="calculateMortgage()">Calculate</button>
         </form>
+    -->
+        <div class="container">
+            <div class="entryarea">
+                <input type="number" id="loanAmount" required>
+                <div class="labelline">Loan Amount</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="entryarea">
+                <input type="number" id="loanTerm" required>
+                <div class="labelline">Loan Term (years) </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="entryarea">
+                <input type="number" id="monthlyIncome" required>
+                <div class="labelline">Monthly Income</div>
+            </div>
+        </div>
+        <div class="submitButton">
+            <button type="button" onclick="calculateMortgage()">Calculate</button>
+        </div>
         <div id="result"></div>
         <div id="resultInfo"></div>
     </main>

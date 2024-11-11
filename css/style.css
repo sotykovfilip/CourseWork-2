@@ -34,6 +34,8 @@ body {
 }
 h2 {
     color: white;
+    margin: 2%;
+    z-index: 100;
 }
 section {
     margin: 5% auto 25%;
@@ -192,11 +194,58 @@ form#contact-form button[type="submit"]:hover {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.entryarea {
+    position: relative;
+    height: 80px;
+
+}
+.entryarea input {
+    outline: none;
+    width: 70%;
+    height: 50%;
+    font-size: 1.6em;
+    padding: 0 30px;
+    line-height: 30px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    background: transparent;
+    transition: 0.2s ease;
+    z-index: 2;
+}
+.entryarea input:focus,
+.entryarea input:valid {
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+.labelline {
+    position: absolute;
+    color: #f0ffff;
+    left: 12%;
+    top: 13%;
+    transition: 0.2s ease;
+    z-index: 1;
+}
+.entryarea input:focus + .labelline,
+.entryarea input:valid + .labelline {
+    color: #007bff;
+    z-index: 3;
+    height: 20px;
+    width: 150px;
+    transform: translate(-5%, -110%);
+    background-color: #0f0f0f;
+    z-index: 3;
+}
+/*
 form#mortgage-form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #0e0e0e;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -219,8 +268,8 @@ form#mortgage-form input[type="number"] {
 form#mortgage-form input[type="number"]:focus {
     border-color: #007bff;
     outline: none;
-}
-form#mortgage-form button {
+} */
+.submitButton button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -231,7 +280,7 @@ form#mortgage-form button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-form#mortgage-form button:hover {
+.submitButton button:hover {
     background-color: #0056b3;
 }
 #result {
