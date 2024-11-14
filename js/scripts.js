@@ -20,24 +20,17 @@ function calculateMortgage() {
     resultDiv.innerText = "Loan amount too high based on your monthly income.";
     resultDiv.classList.add("error");
     let maxMonthly = 0.3 * monthlyIncome;
-    let maxLoan =
-      ((maxMonthly / interestRate) *
-        (Math.pow(1 + interestRate, loanTerm) - 1)) /
-      Math.pow(1 + interestRate, loanTerm);
-    infoDiv.innerHTML = `The maximum loan amount you can afford for a ${loanTerm} month long loan is £${maxLoan.toFixed(
-      2
-    )}`;
+    let maxLoan =((maxMonthly / interestRate) *(Math.pow(1 + interestRate, loanTerm) - 1)) /Math.pow(1 + interestRate, loanTerm);
+    infoDiv.innerHTML = `The maximum loan amount you can afford for a ${loanTerm} month long loan is £${maxLoan.toFixed(2)}`;
   } else {
-    resultDiv.innerText = `Your monthly payment is: £${monthlyPayment.toFixed(
-      2
-    )}`;
-    infoDiv.innerText = `Based on a loan amount of £${loanAmount.toFixed(
-      2
-    )} over ${loanTerm / 12} years at 4.5% interest rate.`;
+    resultDiv.innerHTML = `Your monthly payment is: £${monthlyPayment.toFixed(2)}`;
+    resultDiv.appendChild(br);
+    resultDiv.innerHTML += `That equates to a total of: £${(monthlyPayment * loanTerm).toFixed(2)}`;
+    infoDiv.innerHTML = '<h3>Break Down</h3>';
     infoDiv.appendChild(br);
-    infoDiv.innerHTML += `The total amount paid will be £${(
-      monthlyPayment * loanTerm
-    ).toFixed(2)}`;
+    infoDiv.innerHTML += `Based on a loan amount of £${loanAmount.toFixed(2)} over ${loanTerm / 12} years at 4.5% interest rate.`;
+    infoDiv.appendChild(br);
+    infoDiv.innerHTML += `The total amount paid will be £${(monthlyPayment * loanTerm).toFixed(2)}`;
     resultDiv.classList.add("success");
   }
 
