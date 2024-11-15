@@ -136,10 +136,14 @@ p {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+/*
 .accordion-item:last-child .accordion-header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.accordion-item:last-child{
+    border-bottom: none;
+} */
 .contact-message {
     max-width: 600px;
     margin: 0 auto 20px;
@@ -309,4 +313,14 @@ p {
     background-color: gray;
     max-width: 60%;
     border-radius: 10px;
+}
+#breakDownButton {
+    display: none;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
 }
