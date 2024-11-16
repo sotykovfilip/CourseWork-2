@@ -285,7 +285,7 @@ p {
 }
 #result {
     display: none;
-    max-width: 600px;
+    max-width: 40%;
     margin: 20px auto;
     padding: 15px;
     font-size: 18px;
@@ -323,4 +323,8 @@ p {
     background-color: #007bff;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+}
+#breakDownButton:hover {
+    background-color: #0056b3;
 }

@@ -17,18 +17,20 @@ function calculateMortgage() {
   resultDiv.classList.remove("success", "error");
   //infoDiv.innerText = "";
 
-  if ( monthlyIncome < 0.3 * monthlyIncome) {
-    resultDiv.innerHTML = `Your monthly payment is: £${monthlyPayment.toFixed(2)}`;
+  if ( monthlyPayment < 0.3 * monthlyIncome) {
+    resultDiv.innerHTML = `Your monthly payment would be: £${monthlyPayment.toFixed(2)}`;
     resultDiv.appendChild(br);
-    resultDiv.innerHTML += `That equates to a total of: £${(monthlyPayment * loanTerm).toFixed(2)}`;
+    resultDiv.innerHTML += `The total amount paid back would: £${(monthlyPayment * loanTerm).toFixed(2)}`;
     resultDiv.classList.add("success");
     bdButton.style.display = "block";
   } else if (monthlyPayment > 0.3 * monthlyIncome) {
-    //resultDiv.innerText = "Loan amount too high based on your monthly income.";
-    //  resultDiv.classList.add("error");
     let maxMonthly = 0.3 * monthlyIncome;
     let maxLoan =((maxMonthly / interestRate) *(Math.pow(1 + interestRate, loanTerm) - 1)) /Math.pow(1 + interestRate, loanTerm);
-    infoDiv.innerHTML = `The maximum loan amount you can afford for a ${loanTerm} month long loan is £${maxLoan.toFixed(2)}`;
+    resultDiv.innerText = "Loan amount too high based on your monthly income.";
+    resultDiv.appendChild(br);
+    resultDiv.innerHTML += `The maximum loan amount you can afford for a ${loanTerm} month long loan is £${maxLoan.toFixed(2)}`;
+    resultDiv.classList.add("error");
+    bdButton.style.display = "none";
   } else {
     resultDiv.innerText = "Please enter valid values.";
     resultDiv.classList.add("error");
@@ -41,7 +43,7 @@ function breakDownButton(){
   const breakDown = document.getElementById("breakDown");
   const breakDownDiv = document.getElementById("breakDownDiv");
   breakDownDiv.style.display = "block";
-  breakDown.style.display = "none";
+  breakDown.style.display = "block";
 }
 
 const observer = new IntersectionObserver((entries) => {
