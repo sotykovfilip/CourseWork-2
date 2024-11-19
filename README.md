@@ -8,23 +8,23 @@ This project is part of the Computing Fundamentals course. The coursework is div
 /CW2/
 │
 ├── WebSite
-│   ├── css/
-│       └── style.css
-│   ├── html/
-│       ├── about.html
-│       ├── contact.html
-│       ├── faq.html
-│       ├── index.html
-│       ├── mortgage-calculator.html
-│       └── services.html
-│   └── img/
-│       └── favicon.svg
-│       └── hero.png
-│   └── js/
-│       └── scripts.js
+│   ├─── css/
+│   │    └── style.css
+│   ├─── html/
+│   │    ├── about.html
+│   │    ├── contact.html
+│   │    ├── faq.html
+│   │    ├── index.html
+│   │    ├── mortgage-calculator.html
+│   │    └── services.html
+│   ├─── img/
+│   │    └── favicon.svg
+│   │    └── hero.png
+│   └─── js/
+│        └── scripts.js
 ├── Shell Scripting
-│   ├── 
-│   └── 
+│   ├─── disk_usage.sh
+│   └─── organize_files.sh
 └── README.md
 ```
 
@@ -47,6 +47,6 @@ For the Shell Scripts: <br>
 - CSS
 - JavaScript
 - JQuery
-
-- 
+---------
+- Unix Shell
 

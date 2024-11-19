@@ -117,6 +117,9 @@ section {
 p {
     font-size: 1.2rem;
 }
+.accordion {
+    min-height: 150vh;
+}
 .accordion .accordion-item {
     border-bottom: 1px solid #ddd;
     width: 60%;
@@ -145,14 +148,6 @@ p {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-/*
-.accordion-item:last-child .accordion-header {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.accordion-item:last-child{
-    border-bottom: none;
-} */
 .contact-message {
     max-width: 600px;
     margin: 0 auto 20px;
@@ -337,3 +332,16 @@ p {
 #breakDownButton:hover {
     background-color: #0056b3;
 }
+#breakDown {
+    width: 50%;
+    display: none;
+    margin: 20px auto;
+    margin-bottom: 10%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5em;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #5a5293, #140840);
+}   
