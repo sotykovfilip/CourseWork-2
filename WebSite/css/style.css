@@ -118,8 +118,20 @@ section {
 p {
     font-size: 1.2rem;
 }
+.servicesMain {
+    background-color: rgb(3, 40, 74);
+    margin: 2% auto 70px;
+    width: 80%;
+    border-radius: 3em;
+}
+.servicesMain h2 {
+    color: white;
+    font-size: 2em;
+    font-family: 'DM Serif Text', serif;
+    font-weight: normal;
+}
 .accordion {
-    min-height: 150vh;
+    padding-bottom: 5%;
 }
 .accordion .accordion-item {
     border-bottom: 1px solid #ddd;
