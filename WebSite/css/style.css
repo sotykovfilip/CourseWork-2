@@ -149,6 +149,11 @@ p {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+.contactHeading {
+    margin: 0.5% auto 1%;
+    color: white;
+    font-size: 2em;
+}
 .contact-message {
     max-width: 600px;
     margin: 0 auto 20px;
@@ -275,18 +280,19 @@ p {
     z-index: 3;
 }
 .submitButton button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
     background-color: #007bff;
+    color: #0f0f0f;
     border: none;
-    border-radius: 4px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 500;
+    gap: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 .submitButton button:hover {
-    background-color: #0056b3;
+    background-color: #004d33;
 }
 #result {
     display: none;
@@ -355,7 +361,7 @@ p {
     color: white;
 }
 .aboutusDiv h1{
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'DM Serif Text', serif;
     font-weight: normal;
 }

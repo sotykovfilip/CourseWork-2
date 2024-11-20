@@ -1,3 +1,4 @@
+// Used in mortage-calculator - When calculate button is pressed
 function calculateMortgage() {
   const loanAmount = parseFloat(document.getElementById("loanAmount").value);
   const loanTerm = parseInt(document.getElementById("loanTerm").value) * 12;
@@ -11,11 +12,9 @@ function calculateMortgage() {
     (Math.pow(1 + interestRate, loanTerm) - 1);
 
   const resultDiv = document.getElementById("result");
-  //const infoDiv = document.getElementById("resultInfo");
   const br = document.createElement("br");
   const bdButton = document.getElementById("breakDownButton");
   resultDiv.classList.remove("success", "error");
-  //infoDiv.innerText = "";
 
   if ( monthlyPayment < 0.3 * monthlyIncome) {
     resultDiv.innerHTML = `Your monthly payment would be: £${monthlyPayment.toFixed(2)}`;
@@ -39,6 +38,7 @@ function calculateMortgage() {
   resultDiv.style.display = "block";
 }
 
+// Used in mortage-calculator - When breakdown button is pressed after calculate button
 function breakDownButton(){
   const breakDown = document.getElementById("breakDown");
   const loanAmount = parseFloat(document.getElementById("loanAmount").value);
@@ -60,8 +60,10 @@ function breakDownButton(){
     <p><strong>Total Payment:</strong> £${totalPayment.toFixed(2)}</p>
     <p><strong>Total Interest Paid:</strong> £${totalInterest.toFixed(2)}</p>
     <p><strong>Income to Payment Ratio:</strong> ${incomeToPaymentRatio}%</p>`;
-}
+};
 
+
+// Used in home page - Animate scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -71,15 +73,26 @@ const observer = new IntersectionObserver((entries) => {
       }
     });
   });
-  
 const hiddenElements = document.querySelectorAll(".hidden");
 
 hiddenElements.forEach((element) => {
     observer.observe(element);
 });
-  
 
+// Used in contact page - When send messagd button is pressed
+function sendMessage(){
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
+  if(name == "" || email == "" || message == ""){
+    alert("Please fill out all fields.");
+  } else {
+    alert("Message sent successfully!");
+  }
+};
+
+// JQuery - Used in faq and services page - Accordion Buttons
 $(document).ready(function () {
   $(".accordion-header").on("click", function () {
     $(this).next(".accordion-content").stop(true, true).slideToggle();

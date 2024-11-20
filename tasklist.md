@@ -22,8 +22,9 @@ About Us
 [x] Add text
 
 Contact Us
-[] Spacing (button hiding behind footer)
-[] Button send a message
+[x] Spacing (button hiding behind footer)
+[x] Button send a message
+[x] Change button styling
 
 Services
 [] Heading
