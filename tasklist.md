@@ -10,7 +10,7 @@ Mortgage Calculator
 [x] Enter moves boxes
 [] Add GBP sign in front of amounts
 [] Change Calculate button
-[] Fix click on text not working
+[x] Fix click on text not working
 [] Result box style
 [] BreakDown button
 [] BreakDown box styling

@@ -248,7 +248,13 @@ p {
     transition: 0.2s ease;
     z-index: 1;
     border-radius: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
 }
+
 .entryarea input:valid + .labelline {
     color: white;
     z-index: 3;
@@ -258,18 +264,18 @@ p {
     max-width: max-content;
     transform: translate(-5%, -110%);
     background-color: #0f0f0f;
-    z-index: 3;
 }
+
 .entryarea input:focus + .labelline {
     color: #007bff;
     height: 20px;
     padding-left: 10px;
     padding-right: 10px;
     max-width: max-content;
-    transform: translate(-5%, -120%);
+    transform: translate(-5%, -110%);
     background-color: #0f0f0f;
-    z-index: 3;
 }
+
 .entryarea textarea:valid + .labelline {
     color: white;
     z-index: 3;
@@ -279,17 +285,16 @@ p {
     max-width: max-content;
     transform: translate(-5%, -110%);
     background-color: #0f0f0f;
-    z-index: 3;
 }
+
 .entryarea textarea:focus + .labelline {
     color: #007bff;
     height: 20px;
     padding-left: 10px;
     padding-right: 10px;
     max-width: max-content;
-    transform: translate(-5%, -120%);
+    transform: translate(-5%, -110%);
     background-color: #0f0f0f;
-    z-index: 3;
 }
 .submitButton button {
     background-color: #007bff;
