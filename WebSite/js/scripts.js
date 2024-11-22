@@ -98,16 +98,16 @@ function breakDownButton(){
       <div class="percentage-bar">
         <div class="percentage-fill" style="width: ${incomePercentage}%"></div>
       </div>
-      <div class="breakdown-note">'✅ This is within the recommended range'</div>
+      <div class="breakdown-note">✅ This is within the recommended range</div>
     </div>
 
     <div class="breakdown-section">
       <div class="breakdown-label">🏦 Loan-to-Income Ratio</div>
       <div class="breakdown-value">${loanToIncomeRatio.toFixed(2)}x annual income</div>
       <div class="percentage-bar">
-        <div class="percentage-fill" style="width: ${Math.min(loanToIncomeRatio/4.5 * 100, 100)}%"></div>
+        <div class="percentage-fill" style="width: ${Math.min(loanToIncomeRatio/4.3 * 100, 100)}%"></div>
       </div>
-      <div class="breakdown-note">${loanToIncomeRatio > 4.5 ? '⚠️ This exceeds the typical maximum of 4.5x' : '✅ This is within typical lending limits'}</div>
+      <div class="breakdown-note">${loanToIncomeRatio > 4.3 ? '⚠️ This exceeds the typical maximum of 4.3x ⚠️<br> Our advisors can further help you out' : '✅ This is within typical lending limits'}</div>
     </div>
 
     <div class="breakdown-section">
@@ -130,6 +130,9 @@ function breakDownButton(){
   `;
   
   breakDown.style.display = "block";
+  
+  // Smooth scroll to the breakdown section
+  breakDown.scrollIntoView({ behavior: 'smooth', block: 'start' });
   
   // Animate the percentage bars after display
   setTimeout(() => {
