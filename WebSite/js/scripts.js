@@ -103,9 +103,12 @@ $(document).ready(function () {
   $('input').on('keydown', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
-      var nextInput = $('input').eq($('input').index(this) + 1);
+      var inputs = $('input');
+      var nextInput = inputs.eq(inputs.index(this) + 1);
       if (nextInput.length) {
         nextInput.focus();
+      } else {
+        $('.submitButton button').focus(); // Focus on the existing button within the submitButton class
       }
     }
   });
