@@ -99,4 +99,14 @@ $(document).ready(function () {
     $(".accordion-header").not(this).removeClass("active");
     $(this).toggleClass("active");
   });
+  // Move to next input box when Enter is pressed
+  $('input').on('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      var nextInput = $('input').eq($('input').index(this) + 1);
+      if (nextInput.length) {
+        nextInput.focus();
+      }
+    }
+  });
 });

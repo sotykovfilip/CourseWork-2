@@ -7,7 +7,7 @@ Main Page
 
 Mortgage Calculator
 [] Heading Size/Spacing
-[] Enter moves boxes
+[x] Enter moves boxes
 [] Add GBP sign in front of amounts
 [] Change Calculate button
 [] Fix click on text not working
