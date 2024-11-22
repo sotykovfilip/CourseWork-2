@@ -497,6 +497,7 @@ p {
     text-align: center;
     letter-spacing: 0.05em;
 }
+
 #mortgageHeading::after {
     content: '';
     display: block;
@@ -509,4 +510,69 @@ p {
 
 #mortgageHeading:hover::after {
     width: 18%;
+}
+
+#result.success h3 {
+    color: #4CAF50;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.5em;
+    margin-top: 1em;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    animation: fadeInScale 0.6s ease-out;
+}
+
+#result.success h3::before,
+#result.success h3::after {
+    content: "✦";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50;
+    opacity: 0.6;
+    font-size: 0.8em;
+}
+
+#result.success h3::before {
+    left: -1.5em;
+    animation: slideFromLeft 0.6s ease-out;
+}
+
+#result.success h3::after {
+    right: -1.5em;
+    animation: slideFromRight 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-20px, -50%);
+    }
+    100% {
+        opacity: 0.6;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translate(20px, -50%);
+    }
+    100% {
+        opacity: 0.6;
+        transform: translate(0, -50%);
+    }
 }

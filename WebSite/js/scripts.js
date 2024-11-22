@@ -23,6 +23,8 @@ function calculateMortgage() {
     resultDiv.innerHTML = `Your monthly payment would be: £${monthlyPayment.toFixed(2)}`;
     resultDiv.appendChild(br);
     resultDiv.innerHTML += `The total amount paid back would: £${(monthlyPayment * loanTerm).toFixed(2)}`;
+    resultDiv.appendChild(br);
+    resultDiv.innerHTML += `<h3>We are excited to take care of your future home!</h3>`;
     resultDiv.classList.add("success");
     bdButton.style.display = "block";
   } else if (monthlyPayment > 0.3 * monthlyIncome) {

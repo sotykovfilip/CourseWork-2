@@ -12,11 +12,11 @@ Mortgage Calculator
 [] Change Calculate button
 [x] Fix click on text not working
 [] Result box style
-[] BreakDown button
-[] BreakDown box styling
-    - [] Text Sizing
-    - [] Background Colour
-    - [] Text Colour
+[x] BreakDown button
+[x] BreakDown box styling
+    - [x] Text Sizing
+    - [x] Background Colour
+    - [x] Text Colour
 
 About Us
 [x] Add text
