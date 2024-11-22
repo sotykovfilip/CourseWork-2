@@ -1,10 +1,8 @@
 // Used in mortage-calculator - When calculate button is pressed
 function calculateMortgage() {
-  const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+  const loanAmount = parseFloat(document.getElementById("loanAmount").value.replace(/[^0-9.]/g, ''));
   const loanTerm = parseInt(document.getElementById("loanTerm").value) * 12;
-  const monthlyIncome = parseFloat(
-    document.getElementById("monthlyIncome").value
-  );
+  const monthlyIncome = parseFloat(document.getElementById("monthlyIncome").value.replace(/[^0-9.]/g, ''));
 
   const interestRate = 0.045 / 12;
   const monthlyPayment =
@@ -14,7 +12,12 @@ function calculateMortgage() {
   const resultDiv = document.getElementById("result");
   const br = document.createElement("br");
   const bdButton = document.getElementById("breakDownButton");
+  const breakDown = document.getElementById("breakDown");
+  
+  // Reset all displays
   resultDiv.classList.remove("success", "error");
+  breakDown.style.display = "none";
+  bdButton.style.display = "none";
 
   if ( monthlyPayment < 0.3 * monthlyIncome) {
     resultDiv.innerHTML = `Your monthly payment would be: £${monthlyPayment.toFixed(2)}`;
@@ -45,22 +48,99 @@ function breakDownButton(){
   const loanTerm = parseInt(document.getElementById("loanTerm").value) * 12;
   const monthlyIncome = parseFloat(document.getElementById("monthlyIncome").value);
   const interestRate = 0.045 / 12;
-  const monthlyPayment =(loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) /(Math.pow(1 + interestRate, loanTerm) - 1);
+  const monthlyPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) /(Math.pow(1 + interestRate, loanTerm) - 1);
 
   const totalPayment = monthlyPayment * loanTerm;
   const totalInterest = totalPayment - loanAmount;
-  const incomeToPaymentRatio = ((monthlyPayment / monthlyIncome) * 100).toFixed(2);
+  const incomePercentage = (monthlyPayment / monthlyIncome) * 100;
+  const yearlyPayment = monthlyPayment * 12;
+  const loanToIncomeRatio = loanAmount / (monthlyIncome * 12);
+  const potentialSavings = monthlyIncome - monthlyPayment;
 
-  breakDown.style.display = "block";
   breakDown.innerHTML = `
-    <h3>Mortgage Breakdown</h3>
-    <p><strong>Loan Amount:</strong> £${loanAmount.toFixed(2)}</p>
-    <p><strong>Loan Term:</strong> ${loanTerm / 12} years (${loanTerm} months)</p>
-    <p><strong>Monthly Payment:</strong> £${monthlyPayment.toFixed(2)}</p>
-    <p><strong>Total Payment:</strong> £${totalPayment.toFixed(2)}</p>
-    <p><strong>Total Interest Paid:</strong> £${totalInterest.toFixed(2)}</p>
-    <p><strong>Income to Payment Ratio:</strong> ${incomeToPaymentRatio}%</p>`;
-};
+    <h3>Mortgage Breakdown Analysis</h3>
+    
+    <div class="breakdown-section">
+      <div class="breakdown-label">📊 Monthly Payment</div>
+      <div class="breakdown-value">£${monthlyPayment.toFixed(2)}</div>
+      <div class="breakdown-note">This amount will be due each month for the entire loan term</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">📅 Annual Cost</div>
+      <div class="breakdown-value">£${yearlyPayment.toFixed(2)}</div>
+      <div class="breakdown-note">Your total payments per year</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">💰 Total Loan Amount</div>
+      <div class="breakdown-value">£${loanAmount.toFixed(2)}</div>
+      <div class="percentage-bar">
+        <div class="percentage-fill" style="width: ${(loanAmount/totalPayment)*100}%"></div>
+      </div>
+      <div class="breakdown-note">Principal amount you're borrowing</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">💸 Total Interest</div>
+      <div class="breakdown-value">£${totalInterest.toFixed(2)}</div>
+      <div class="percentage-bar">
+        <div class="percentage-fill" style="width: ${(totalInterest/totalPayment)*100}%"></div>
+      </div>
+      <div class="breakdown-note">Total interest paid over ${loanTerm/12} years</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">📈 Monthly Income Ratio</div>
+      <div class="breakdown-value">${incomePercentage.toFixed(1)}% of monthly income</div>
+      <div class="percentage-bar">
+        <div class="percentage-fill" style="width: ${incomePercentage}%"></div>
+      </div>
+      <div class="breakdown-note">'✅ This is within the recommended range'</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">🏦 Loan-to-Income Ratio</div>
+      <div class="breakdown-value">${loanToIncomeRatio.toFixed(2)}x annual income</div>
+      <div class="percentage-bar">
+        <div class="percentage-fill" style="width: ${Math.min(loanToIncomeRatio/4.5 * 100, 100)}%"></div>
+      </div>
+      <div class="breakdown-note">${loanToIncomeRatio > 4.5 ? '⚠️ This exceeds the typical maximum of 4.5x' : '✅ This is within typical lending limits'}</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">💵 Monthly Savings Potential</div>
+      <div class="breakdown-value">£${potentialSavings.toFixed(2)}</div>
+      <div class="breakdown-note">Amount potentially available for savings after mortgage payment</div>
+    </div>
+
+    <div class="breakdown-section">
+      <div class="breakdown-label">⏱️ Payment Schedule</div>
+      <div class="breakdown-value">${loanTerm} monthly payments</div>
+      <div class="breakdown-note">Payment frequency: Monthly | First payment due: One month after completion</div>
+    </div>
+
+    <div class="breakdown-section total-section">
+      <div class="breakdown-label">🏦 Total Cost</div>
+      <div class="breakdown-value">£${totalPayment.toFixed(2)}</div>
+      <div class="breakdown-note">Total amount you'll pay over the full term</div>
+    </div>
+  `;
+  
+  breakDown.style.display = "block";
+  
+  // Animate the percentage bars after display
+  setTimeout(() => {
+    const bars = document.querySelectorAll('.percentage-fill');
+    bars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 50);
+    });
+  }, 100);
+}
 
 
 // Used in home page - Animate scroll
