@@ -385,3 +385,26 @@ p {
 .aboutusDiv b {
     color: #007bff;
 }
+#mortgageHeading {
+    color: white;
+    font-size: 2em;
+    font-family: 'DM Serif Text', serif;
+    font-weight: normal;
+    margin: 1em 0;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+#mortgageHeading::after {
+    content: '';
+    display: block;
+    width: 5%;
+    height: 3px;
+    background: #0c9b07;
+    margin: 0.5% auto 0;
+    transition: width 0.3s ease;
+}
+
+#mortgageHeading:hover::after {
+    width: 18%;
+}

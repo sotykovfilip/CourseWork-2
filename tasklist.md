@@ -6,7 +6,7 @@ Main Page
 [] Mortage Calculator button redesign
 
 Mortgage Calculator
-[] Heading Size/Spacing
+[x] Heading Size/Spacing
 [x] Enter moves boxes
 [] Add GBP sign in front of amounts
 [] Change Calculate button

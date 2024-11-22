@@ -79,7 +79,7 @@ hiddenElements.forEach((element) => {
     observer.observe(element);
 });
 
-// Used in contact page - When send messagd button is pressed
+// Used in contact page - When send message button is pressed
 function sendMessage(){
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
