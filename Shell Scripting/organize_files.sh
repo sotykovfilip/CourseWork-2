@@ -2,7 +2,6 @@
 
 # Define an array of sample filenames
 files=("document.txt" "photo.jpg" "report.pdf" "image.png" "notes.docx" "presentation.pptx") 
-echo   # Print a blank line for spacing
 echo "The Current Files:" # Print a message indicating the current files
 
 for file in ${files[@]}; do  # Loop through each file 

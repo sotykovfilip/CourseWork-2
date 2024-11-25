@@ -62,10 +62,10 @@ function breakDownButton(){
   const potentialSavings = monthlyIncome - monthlyPayment;
 
   breakDown.innerHTML = `
-    <h3>Mortgage Breakdown Analysis</h3>
+    <h3 id='breakdownheading'>Mortgage Breakdown Analysis</h3>
     
     <div class="breakdown-section">
-      <div class="breakdown-label">📊 Monthly Payment</div>
+      <div class="breakdown-label" id="scroll">📊 Monthly Payment</div>
       <div class="breakdown-value">£${monthlyPayment.toFixed(2)}</div>
       <div class="breakdown-note">This amount will be due each month for the entire loan term</div>
     </div>
@@ -77,12 +77,12 @@ function breakDownButton(){
     </div>
 
     <div class="breakdown-section">
-      <div class="breakdown-label">💰 Total Loan Amount</div>
+      <div class="breakdown-label">💰 Principal Amount</div>
       <div class="breakdown-value">£${loanAmount.toFixed(2)}</div>
       <div class="percentage-bar">
         <div class="percentage-fill" style="width: ${(loanAmount/totalPayment)*100}%"></div>
       </div>
-      <div class="breakdown-note">Principal amount you're borrowing</div>
+      <div class="breakdown-note"> Amount you're borrowing</div>
     </div>
 
     <div class="breakdown-section">
@@ -132,9 +132,8 @@ function breakDownButton(){
   `;
 
   breakDown.style.display = "block";
-  
-  // Smooth scroll to the breakdown section
-  breakDown.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollCenter = document.getElementById("scroll");
+  scrollCenter.scrollIntoView({ behavior: 'smooth', block: 'center' });
   breakDownButton.style.display = "none";
   
   // Animate the percentage bars after display
@@ -145,7 +144,7 @@ function breakDownButton(){
       bar.style.width = '0';
       setTimeout(() => {
         bar.style.width = width;
-      }, 50);
+      }, 100);
     });
   }, 100);
 }
