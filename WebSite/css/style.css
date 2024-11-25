@@ -118,6 +118,12 @@ section {
     filter: blur(0);
     transform: translateY(0);
 }
+.s2 {
+    margin-bottom: 15%;
+}
+.s3 {
+    margin-bottom: 3%;
+}
 .s2 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;

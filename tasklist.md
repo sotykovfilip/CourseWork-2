@@ -1,9 +1,9 @@
 Main Page
-[] Spacing
+[x] Spacing
 [] Change Hero Image 
 [] Hero Image styling
-[] Text sizing
-[] Mortage Calculator button redesign
+[x] Text sizing
+[x] Mortage Calculator button redesign
 
 Mortgage Calculator
 [x] Heading Size/Spacing
@@ -32,7 +32,7 @@ Services
 
 FAQ
 [x] Heading
-[x] Add all headings and content
+[] Add all headings and content
 [x] Background colour of textbox
 [x] Find way to make button not go behind footer but no scrolling when not open
 
