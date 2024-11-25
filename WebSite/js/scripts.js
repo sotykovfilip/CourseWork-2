@@ -41,11 +41,13 @@ function calculateMortgage() {
   }
 
   resultDiv.style.display = "block";
+  resultDiv.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 // Used in mortage-calculator - When breakdown button is pressed after calculate button
 function breakDownButton(){
   const breakDown = document.getElementById("breakDown");
+  const breakDownButton = document.getElementById("breakDownButton");
   const loanAmount = parseFloat(document.getElementById("loanAmount").value);
   const loanTerm = parseInt(document.getElementById("loanTerm").value) * 12;
   const monthlyIncome = parseFloat(document.getElementById("monthlyIncome").value);
@@ -128,11 +130,12 @@ function breakDownButton(){
       <div class="breakdown-note">Total amount you'll pay over the full term</div>
     </div>
   `;
-  
+
   breakDown.style.display = "block";
   
   // Smooth scroll to the breakdown section
   breakDown.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  breakDownButton.style.display = "none";
   
   // Animate the percentage bars after display
   setTimeout(() => {

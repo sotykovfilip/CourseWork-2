@@ -76,6 +76,7 @@ body {
 footer {
     position: fixed;
     bottom: 0;
+    max-height: 10%;
     width: 100%;
     background-color: #0f0f0f;
     color: white;
@@ -115,7 +116,7 @@ section {
     color: white;
 }
 .item {
-    margin: 10px;
+    margin: 1%;
 }
 .item:nth-child(2){
     transition-delay: 150ms;
@@ -152,7 +153,7 @@ p {
 }
 .servicesMain {
     background-color: rgb(3, 40, 74);
-    margin: 2% auto 70px;
+    margin: 2% auto 10%;
     width: 80%;
     border-radius: 3em;
 }
@@ -171,7 +172,7 @@ p {
     margin: 0 auto;
 }
 .accordion-header {
-    padding: 15px;
+    padding: 2%;
     font-weight: bold;
     cursor: pointer;
     background-color: #f1f1f1;
@@ -181,7 +182,7 @@ p {
     background-color: #e0e0e0;
 }
 .accordion-content {
-    padding: 15px;
+    padding: 3%;
     display: none;
     background-color: #fafafa;
 }
@@ -193,28 +194,6 @@ p {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.contactHeading {
-    margin: 0.5% auto 1%;
-    color: white;
-    font-size: 2em;
-}
-.contact-message {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    padding: 10px;
-    color: #333;
-    border-radius: 4px;
-}
-.contact-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-.contact-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
 .container {
     display: flex;
     justify-content: center;
@@ -224,7 +203,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 9em;
+    margin-bottom: 5%;
+    height: 30%;
 }
 .entryarea {
     position: relative;
@@ -235,8 +215,9 @@ p {
     width: 100%;
     height: 50%;
     font-size: 1.6em;
-    padding: 0 10px;
-    line-height: 30px;
+    line-height: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 12px;
     border: 2px solid #ddd;
     background: transparent;
@@ -254,14 +235,15 @@ p {
 .entryarea textarea {
     outline: none;
     width: 22em;
-    height: 9em;
+    height: 100%;
     font-size: 1.6em;
-    padding: 0 10px;
-    line-height: 30px;
+    padding: 4% 2%;
+    line-height: 2%;
     border-radius: 12px;
     border: 2px solid #ddd;
     background: transparent;
     transition: 0.2s ease;
+    resize: none;
     z-index: 2;
 }
 .entryarea textarea:valid {
@@ -328,7 +310,13 @@ p {
     transform: translate(-5%, -110%);
     background-color: #0f0f0f;
 }
-.submitButton button {
+.submitButtonContact {
+    margin-bottom: 10%;
+}
+.submitButton {
+    margin-top: 0%;
+}
+.submitButton button, .submitButtonContact button {
     background-color: #0f0f0f;
     color: white;
     border: 2px solid #007bff;
@@ -338,10 +326,9 @@ p {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'DM Serif Text', serif;
-    margin: 1em 0;
 }
 
-.submitButton button:hover {
+.submitButton button:hover , .submitButtonContact button:hover{
     background-color: #007bff;
     color: #0f0f0f;
     transform: translateY(-2px);
@@ -362,7 +349,7 @@ p {
 }
 
 #result.success {
-    border-color: #0c9b07;
+    border-color: #007bff;
 }
 
 #result.error {
@@ -372,14 +359,14 @@ p {
 #breakDownButton {
     background-color: #0f0f0f;
     color: white;
-    border: 2px solid #0c9b07;
+    border: 2px solid #007bff;
     padding: 10px 25px;
     font-size: 1.1em;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'DM Serif Text', serif;
-    margin: 1em auto 0;
+    margin: 1em auto 10%;
     display: none;
 }
 
@@ -392,7 +379,7 @@ p {
 
 #breakDown {
     background-color: rgba(15, 15, 15, 0.9);
-    border: 2px solid #0c9b07;
+    border: 2px solid #007bff;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto 80px;
@@ -403,7 +390,7 @@ p {
 }
 
 #breakDown h3 {
-    color: #0c9b07;
+    color: #007bff;
     font-size: 1.8em;
     margin-bottom: 1em;
     font-family: 'DM Serif Text', serif;
@@ -431,7 +418,7 @@ p {
 
 #breakDown .breakdown-section {
     background-color: rgba(12, 155, 7, 0.1);
-    border-left: 3px solid #0c9b07;
+    border-left: 3px solid #007bff;
     padding: 15px;
     margin: 15px 0;
     border-radius: 0 8px 8px 0;
@@ -445,7 +432,7 @@ p {
 
 #breakDown .breakdown-label {
     font-size: 1.1em;
-    color: #0c9b07;
+    color: #007bff;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -487,7 +474,7 @@ p {
 
 #breakDown .icon {
     margin-right: 10px;
-    color: #0c9b07;
+    color: #007bff;
 }
 #resultInfo {
     color: white;
@@ -545,7 +532,7 @@ p {
 }
 
 #result.success h3 {
-    color: #4CAF50;
+    color: #007bff;
     font-family: 'DM Serif Text', serif;
     font-size: 1.5em;
     margin-top: 1em;
@@ -561,7 +548,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #4CAF50;
+    color: #007bff;
     opacity: 0.6;
     font-size: 0.8em;
 }
