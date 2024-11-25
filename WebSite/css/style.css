@@ -151,18 +151,34 @@ p {
     font-size: 1.2rem;
 }
 .servicesMain {
-    background-color: rgb(3, 40, 74);
     margin: 2% auto 10%;
     width: 80%;
     border-radius: 3em;
 }
 .servicesMain h2 {
     color: white;
-    padding-top: 1em;
     font-size: 2em;
     font-family: 'DM Serif Text', serif;
     font-weight: normal;
+    margin: 1em 0;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.05em;
 }
+.servicesMain h2::after {
+    content: '';
+    display: block;
+    width: 0.5%;
+    height: 3px;
+    background: #007bff;
+    margin: 0.5% auto 0;
+    transition: width 0.3s ease;
+}
+
+.servicesMain h2:hover::after {
+    width: 15%;
+}
+
 .accordion {
     padding-bottom: 5%;
 }
@@ -186,6 +202,9 @@ p {
     display: none;
     background-color: #fafafa;
 }
+.accordion-content a {
+    color: #007bff;
+}
 .accordion-header.active {
     background-color: #d0d0d0;
     color: #007bff;
@@ -204,7 +223,7 @@ p {
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    height: 30%;
+    height: 100%;
 }
 .entryarea {
     position: relative;
@@ -234,8 +253,8 @@ p {
 }
 .entryarea textarea {
     outline: none;
-    width: 22em;
-    height: 100%;
+    width: 30em;
+    height: 120%;
     font-size: 1.6em;
     padding: 4% 2%;
     line-height: 2%;
