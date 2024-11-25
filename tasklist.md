@@ -9,7 +9,7 @@ Mortgage Calculator
 [x] Heading Size/Spacing
 [x] Enter moves boxes
 [] Add GBP sign in front of amounts
-[] Change Calculate button
+[x] Change Calculate button
 [x] Fix click on text not working
 [x] Result box style
 [x] BreakDown button
@@ -27,12 +27,12 @@ Contact Us
 [x] Change button styling
 
 Services
-[] Heading
-[] Background colour of textbox
+[x] Heading
+[x] Background colour of textbox
 
 FAQ
-[] Heading
-[] Add all headings and content
-[] Background colour of textbox
-[] Find way to make button not go behind footer but no scrolling when not open
+[x] Heading
+[x] Add all headings and content
+[x] Background colour of textbox
+[x] Find way to make button not go behind footer but no scrolling when not open
 

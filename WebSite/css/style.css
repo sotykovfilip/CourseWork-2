@@ -549,6 +549,29 @@ p {
 #mortgageHeading:hover::after {
     width: 18%;
 }
+.contactHeading {
+    color: white;
+    font-size: 2em;
+    font-family: 'DM Serif Text', serif;
+    font-weight: normal;
+    margin: 1em 0;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+.contactHeading::after {
+    content: '';
+    display: block;
+    width: 1%;
+    height: 3px;
+    background: #007bff;
+    margin: 0.5% auto 0;
+    transition: width 0.3s ease;
+}
+.contactHeading:hover::after {
+    width: 10%;
+}
+
 
 #result.success h3 {
     color: #007bff;
