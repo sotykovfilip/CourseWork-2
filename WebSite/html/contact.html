@@ -1,63 +1,62 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>FI Bank | Contact</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
-        <script src="../js/scripts.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="mortgage-calculator.html">Mortgage Calculator</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html" class="active">Contact Us</a>
-                <a href="services.html">Services</a>
-                <a href="faq.html">FAQ</a>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FI Bank | Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
+    <main>
+        <h2 class="contactHeading">Contact Us</h2>
+        <div class="container">
+            <div class="entryarea">
+                <input type="text" id="name" required>
+                <div class="labelline">Name</div>
             </div>
-        </nav>
-        <main>
-            <h2 class="contactHeading">Contact Us</h2>
-            <div class="container">
-                <div class="entryarea">
-                    <input type="text" id="name" required>
-                    <div class="labelline">Name</div>
-                </div>
+        </div>
+        <div class="container">
+            <div class="entryarea">
+                <input type="email" id="email" required>
+                <div class="labelline">Email</div>
             </div>
-            <div class="container">
-                <div class="entryarea">
-                    <input type="email" id="email" required>
-                    <div class="labelline">Email</div>
-                </div>
+        </div>
+        <div class="container">
+            <div class="entryarea">
+                <input type="text" id="subject" required>
+                <div class="labelline">Subject</div>
             </div>
-            <div class="container">
-                <div class="entryarea">
-                    <input type="text" id="subject" required>
-                    <div class="labelline">Subject</div>
-                </div>
+        </div>
+        <div class="containerta">
+            <div class="entryarea">
+                <textarea id="message" required></textarea>
+                <div class="labelline">Message</div>
             </div>
-            <div class="containerta">
-                <div class="entryarea">
-                    <textarea id="message" required></textarea>
-                    <div class="labelline">Message</div>
-                </div>
-            </div>
-            <div class="submitButtonContact">
-                <button class='submitButton' type="button" onclick="sendMessage()">Send Message</button>
-            </div>
-        </main>
-        <footer>
-            <h2>First Investment Bank</h2>
-        </footer>
-    </body>
+        </div>
+        <div class="submitButtonContact">
+            <button class='submitButton' type="button" onclick="sendMessage()">Send Message</button>
+        </div>
+    </main>
+    <footer>
+        <h2>First Investment Bank</h2>
+    </footer>
+</body>
+
 </html>

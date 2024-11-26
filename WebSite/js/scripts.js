@@ -179,8 +179,9 @@ function sendMessage(){
   }
 };
 
-// JQuery - Used in faq and services page - Accordion Buttons
+// JQuery
 $(document).ready(function () {
+  // Used in faq and services page - Accordion Buttons
   $(".accordion-header").on("click", function () {
     $(this).next(".accordion-content").stop(true, true).slideToggle();
     $(".accordion-header").not(this).removeClass("active");

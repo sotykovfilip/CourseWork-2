@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 @keyframes fadeInScale {
     0% {
         opacity: 0;
         transform: scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -20,6 +23,7 @@ input::-webkit-inner-spin-button {
         opacity: 0;
         transform: translate(-20px, -50%);
     }
+
     100% {
         opacity: 0.6;
         transform: translate(0, -50%);
@@ -31,16 +35,19 @@ input::-webkit-inner-spin-button {
         opacity: 0;
         transform: translate(20px, -50%);
     }
+
     100% {
         opacity: 0.6;
         transform: translate(0, -50%);
     }
 }
+
 @keyframes fadeInScale {
     0% {
         opacity: 0;
         transform: scale(0.95);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -48,12 +55,14 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-  appearance: textfield;
+    appearance: textfield;
 }
+
 * {
     padding: 0;
     margin: 0;
 }
+
 .navbar {
     background-color: #0f0f0f;
     padding: 1rem;
@@ -62,27 +71,32 @@ input[type=number] {
     z-index: 1000;
     font-family: 'DM Serif Text', serif;
 }
+
 .nav-links {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
 }
+
 nav a.active {
     color: #007bff;
     font-weight: bold;
     border-bottom: 2px solid #007bff;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
+
 body {
     margin: 0;
     text-align: center;
     background-color: #0f0f0f;
     font-family: "Times New Roman", Times, serif;
 }
+
 footer {
     position: fixed;
     bottom: 0;
@@ -92,20 +106,24 @@ footer {
     color: white;
     text-align: center;
 }
-footer h2{
+
+footer h2 {
     padding: 0.5rem 1rem;
     margin: 1%;
 }
+
 h2 {
     color: white;
     margin: 2%;
     z-index: 100;
 }
+
 section {
     margin: 5% auto 25%;
     height: 30em;
     width: 80%;
 }
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -118,12 +136,15 @@ section {
     filter: blur(0);
     transform: translateY(0);
 }
+
 .s2 {
     margin-bottom: 15%;
 }
+
 .s3 {
     margin-bottom: 3%;
 }
+
 .s2 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
@@ -146,23 +167,9 @@ section {
 
 .itemList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-@media (max-width: 1200px) {
-    .itemList {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .itemList {
-        grid-template-columns: 1fr;
-    }
 }
 
 .item {
@@ -187,19 +194,23 @@ section {
     font-weight: 500;
 }
 
-.item:nth-child(2){
+.item:nth-child(2) {
     transition-delay: 150ms;
 }
-.item:nth-child(3){
+
+.item:nth-child(3) {
     transition-delay: 300ms;
 }
-.item:nth-child(4){
+
+.item:nth-child(4) {
     transition-delay: 450ms;
 }
-.item:nth-child(5){
+
+.item:nth-child(5) {
     transition-delay: 600ms;
 }
-.item:nth-child(6){
+
+.item:nth-child(6) {
     transition-delay: 750ms;
 }
 
@@ -275,8 +286,9 @@ section {
 }
 
 .s1 {
-    margin: 2% auto 17%;
+    margin: 2% auto 10%;
 }
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/hero.jpg");
     height: 100%;
@@ -314,14 +326,17 @@ section {
     font-weight: 300;
     opacity: 0.9;
 }
+
 p {
     font-size: 1.2rem;
 }
+
 .servicesMain {
     margin: 2% auto 10%;
     width: 80%;
     border-radius: 3em;
 }
+
 .servicesMain h2 {
     color: white;
     font-size: 2em;
@@ -332,6 +347,7 @@ p {
     text-align: center;
     letter-spacing: 0.05em;
 }
+
 .servicesMain h2::after {
     content: '';
     display: block;
@@ -406,6 +422,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 .containerta {
     display: flex;
     justify-content: center;
@@ -413,10 +430,12 @@ p {
     margin-bottom: 5%;
     height: 100%;
 }
+
 .entryarea {
     position: relative;
     height: 5em;
 }
+
 .entryarea input {
     outline: none;
     width: 100%;
@@ -431,14 +450,17 @@ p {
     transition: 0.2s ease;
     z-index: 2;
 }
+
 .entryarea input:valid {
     color: white;
     border: 2px solid white
 }
-.entryarea input:focus{
+
+.entryarea input:focus {
     color: #007bff;
     border: 2px solid #007bff;
 }
+
 .entryarea textarea {
     outline: none;
     width: 30em;
@@ -453,14 +475,17 @@ p {
     resize: none;
     z-index: 2;
 }
+
 .entryarea textarea:valid {
     color: white;
     border: 2px solid white
 }
-.entryarea textarea:focus{
+
+.entryarea textarea:focus {
     color: #007bff;
     border: 2px solid #007bff;
 }
+
 .labelline {
     position: absolute;
     color: #f0ffff;
@@ -476,7 +501,7 @@ p {
     cursor: pointer;
 }
 
-.entryarea input:valid + .labelline {
+.entryarea input:valid+.labelline {
     color: white;
     z-index: 3;
     height: 20px;
@@ -487,7 +512,7 @@ p {
     background-color: #0f0f0f;
 }
 
-.entryarea input:focus + .labelline {
+.entryarea input:focus+.labelline {
     color: #007bff;
     height: 20px;
     padding-left: 10px;
@@ -497,7 +522,7 @@ p {
     background-color: #0f0f0f;
 }
 
-.entryarea textarea:valid + .labelline {
+.entryarea textarea:valid+.labelline {
     color: white;
     z-index: 3;
     height: 20px;
@@ -508,7 +533,7 @@ p {
     background-color: #0f0f0f;
 }
 
-.entryarea textarea:focus + .labelline {
+.entryarea textarea:focus+.labelline {
     color: #007bff;
     height: 20px;
     padding-left: 10px;
@@ -517,13 +542,17 @@ p {
     transform: translate(-5%, -110%);
     background-color: #0f0f0f;
 }
+
 .submitButtonContact {
     margin-bottom: 10%;
 }
+
 .submitButton {
     margin-top: 0%;
 }
-.submitButton button, .submitButtonContact button {
+
+.submitButton button,
+.submitButtonContact button {
     background-color: #0f0f0f;
     color: white;
     border: 2px solid #007bff;
@@ -535,7 +564,8 @@ p {
     font-family: 'DM Serif Text', serif;
 }
 
-.submitButton button:hover , .submitButtonContact button:hover{
+.submitButton button:hover,
+.submitButtonContact button:hover {
     background-color: #007bff;
     color: #0f0f0f;
     transform: translateY(-2px);
@@ -683,15 +713,18 @@ p {
     margin-right: 10px;
     color: #007bff;
 }
+
 #resultInfo {
     color: white;
 }
+
 .resultContainer {
     margin: auto;
     background-color: gray;
     max-width: 60%;
     border-radius: 10px;
 }
+
 .aboutusDiv {
     margin: 5% auto;
     width: 80%;
@@ -700,19 +733,23 @@ p {
     padding: 1em;
     color: white;
 }
-.aboutusDiv h1{
+
+.aboutusDiv h1 {
     font-size: 2em;
     font-family: 'DM Serif Text', serif;
     font-weight: normal;
 }
-.aboutusDiv p{
+
+.aboutusDiv p {
     color: white;
     font-size: 1.2em;
     font-family: 'DM Serif Text', serif;
 }
+
 .aboutusDiv b {
     color: #007bff;
 }
+
 #mortgageHeading {
     color: white;
     font-size: 2em;
@@ -737,6 +774,7 @@ p {
 #mortgageHeading:hover::after {
     width: 18%;
 }
+
 .contactHeading {
     color: white;
     font-size: 2em;
@@ -747,6 +785,7 @@ p {
     text-align: center;
     letter-spacing: 0.05em;
 }
+
 .contactHeading::after {
     content: '';
     display: block;
@@ -756,10 +795,10 @@ p {
     margin: 0.5% auto 0;
     transition: width 0.3s ease;
 }
+
 .contactHeading:hover::after {
     width: 10%;
 }
-
 
 #result.success h3 {
     color: #007bff;
